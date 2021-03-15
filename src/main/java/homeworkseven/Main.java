@@ -1,2 +1,43 @@
-package homeworkseven;public class Main {
-}
+package homeworkseven;
+
+/*
+        2. Сделать так, чтобы в тарелке с едой не могло получиться отрицательного количества еды
+        (например, в миске 10 еды, а кот пытается покушать 15-20).
+        3. Каждому коту нужно добавить поле сытость (когда создаем котов, они голодны).
+        Если коту удалось покушать (хватило еды), сытость = true.
+        4. Считаем, что если коту мало еды в тарелке, то он её просто не трогает,
+        то есть не может быть наполовину сыт (это сделано для упрощения логики программы).
+        5. Создать массив котов и тарелку с едой, попросить всех котов покушать из этой
+        тарелки и потом вывести информацию о сытости котов в консоль.
+        6. Добавить в тарелку метод, с помощью которого можно было бы добавлять еду в тарелку.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+  //      Cat cat = new Cat("Barsik", 5);
+        Cat[] cat = new Cat [3];
+        cat[0] = new Cat("Kitty", 10);
+        cat[1] = new Cat("Kotty", 7);
+        cat[2] = new Cat("Katty",11);
+
+        Plate plate = new Plate(111);
+
+        for (int i = 0; i<3; i++){
+            System.out.print(cat[i].getName());
+            System.out.println();
+           // System.out.println(cat[i].getAppetite());
+
+            cat[i].eat(plate);
+
+ //       plate.foodAdd();
+
+
+
+
+
+            }
+        }
+    }
+
+
